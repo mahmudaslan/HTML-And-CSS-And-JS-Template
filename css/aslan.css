@@ -59,6 +59,7 @@ header .container {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  position: relative;
 }
 header .logo {
   color: var(--main-color);
@@ -130,6 +131,93 @@ header .main-nav > li > a:hover {
 header .main-nav > li > a:hover::before {
   left: 0;
 }
+/* Start Mega Menu */
+header .mega-menu {
+  position: absolute;
+  background-color: white;
+  left: 0;
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  padding: 30px;
+  top: calc(100% + 50px);
+  border-bottom: var(--main-color) solid 3px;
+  z-index: -1;
+  opacity: 0;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+header .main-nav > li:hover .mega-menu {
+  opacity: 1;
+  top: calc(100% + 1px);
+  z-index: 100;
+}
+@media (max-width: 767px) {
+  header .mega-menu {
+    flex-direction: column;
+    gap: 0;
+    padding: 5px;
+  }
+}
+header .mega-menu .mega-img img {
+  max-width: 100%;
+}
+@media (max-width: 991px) {
+  header .mega-menu .mega-img {
+    display: none;
+  }
+}
+header .mega-menu .links {
+  flex: 1;
+  min-width: 240px;
+}
+header .mega-menu .links li {
+  position: relative;
+  overflow: hidden;
+}
+header .mega-menu .links li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  background-color: #fafafa;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+header .mega-menu .links li:hover::before {
+  width: 100%;
+}
+header .mega-menu .links li:not(:last-child) {
+  border-bottom: solid 1px #ddd;
+}
+@media (max-width: 767px) {
+  header .mega-menu .links:first-of-type li:last-child {
+    border-bottom: solid 1px #ddd;
+  }
+}
+header .mega-menu .links a {
+  color: var(--main-color);
+  font-weight: 700;
+  font-size: 18px;
+  padding: 15px;
+  display: block;
+}
+header .mega-menu .links li a:hover {
+  color: var(--main-color-alt);
+}
+header .mega-menu .links a i {
+  margin-right: 15px;
+}
+
+/* End Mega Menu */
 /* End Header */
 /* Start Landing */
 .landing {
