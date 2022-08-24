@@ -771,3 +771,54 @@ header .mega-menu .links a i {
   }
 }
 /* End Animation */
+/* Start Testimonials */
+.testimonials {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+}
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  row-gap: 60px;
+}
+.testimonials .box {
+  position: relative;
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+.testimonials .box h3 {
+  margin: 0 auto;
+}
+.testimonials .box p:first-of-type {
+  margin: 10px auto;
+  color: #777;
+}
+.testimonials .box .stars .fa-solid {
+  color: gold;
+}
+.testimonials .box p:last-of-type {
+  line-height: 1.5;
+  color: #777;
+  margin: 10px 0 0;
+}
+.testimonials .box img {
+  position: absolute;
+  top: -50px;
+  right: -5px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: solid 10px var(--section-background);
+}
+/* End Testimonials */
