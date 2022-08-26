@@ -1251,6 +1251,156 @@ header .mega-menu .links a i {
   }
 }
 /* End Events */
+/* Start Pricing Plan */
+.pricing {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+  position: relative;
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.pricing .dot-top {
+  position: absolute;
+  right: 0;
+  top: 200px;
+}
+.pricing .dot-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 200px;
+}
+.pricing .container .box {
+  background-color: white;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  position: relative;
+  z-index: 1;
+}
+.pricing .container .box::before,
+.pricing .container .box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  background-color: #f9f9f9;
+  z-index: -1;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.pricing .container .box::before {
+  left: 0;
+  top: 0;
+}
+.pricing .container .box::after {
+  right: 0;
+  bottom: 0;
+}
+.pricing .container .box:hover::before,
+.pricing .container .box:hover::after {
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  .pricing .container .box.advanced {
+    top: -20px;
+  }
+}
+.pricing .container .box.advanced .mark {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  padding: 10px 10px 35px 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  width: 40px;
+  background-color: var(--main-color);
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+  -ms-writing-mode: vertical-lr;
+}
+.pricing .container .box.advanced .mark::before {
+  content: "";
+  position: absolute;
+  right: -1px;
+  bottom: 0;
+  border: solid 20px;
+  border-color: transparent transparent white;
+}
+.pricing .box .title {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+}
+.pricing .box img {
+  max-width: 80px;
+  margin: 0 auto;
+  display: block;
+}
+.pricing .box .price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+.pricing .box .price .amount {
+  font-size: 60px;
+  color: var(--main-color);
+  font-weight: bold;
+}
+.pricing .box .price .time {
+  color: #777;
+}
+.pricing .box ul li {
+  padding: 20px 40px;
+  border-top: solid 1px #d5d5d5;
+  position: relative;
+}
+.pricing .box ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f00c";
+  font-weight: 900;
+  position: absolute;
+  left: 10px;
+  color: var(--main-color);
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+.pricing .box a {
+  display: flex;
+  margin: 30px auto;
+  color: var(--main-color);
+  font-weight: bold;
+  padding: 15px 20px;
+  width: fit-content;
+  border: solid 2px var(--main-color);
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.pricing .box a:hover {
+  color: white;
+  background-color: var(--main-color-alt);
+}
+/* End Pricing Plan */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
