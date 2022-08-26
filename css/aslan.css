@@ -347,6 +347,7 @@ header .mega-menu .links a i {
   position: relative;
   display: flex;
   width: 600px;
+  height: 600px;
   animation-name: up-and-down;
   animation-duration: 5s;
   animation-iteration-count: infinite;
@@ -938,6 +939,135 @@ header .mega-menu .links a i {
   -o-transform: skewX(-30deg);
 }
 /* End Services */
+/* Start Our Skills */
+.our-skills {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.our-skills .container {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .our-skills .container img {
+    display: none;
+  }
+}
+.our-skills .skills {
+  flex: 1;
+}
+.our-skills .skill h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.our-skills .skill h3 span {
+  color: var(--main-color);
+  font-weight: bold;
+  font-size: 12px;
+  border: solid 1px #ccc;
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  padding: 2px 5px;
+}
+.our-skills .skills .prog {
+  position: relative;
+  height: 30px;
+  background-color: #eee;
+}
+.our-skills .skills .prog span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--main-color);
+}
+/* End Our Skills */
+/* Start Work Steps */
+.work-steps {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-background);
+}
+.work-steps .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+@media (max-width: 991px) {
+  .work-steps .container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+.work-steps .container > img {
+  max-width: 100%;
+}
+.work-steps .works .box {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f6f5f5;
+  margin-bottom: 20px;
+  padding: 30px;
+  position: relative;
+  border: solid 2px white;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  z-index: 1;
+}
+@media (max-width: 767px) {
+  .work-steps .works .box {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.work-steps .works .box::before {
+  content: "";
+  position: absolute;
+  background-color: var(--section-background);
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.work-steps .works .box:hover::before {
+  width: 100%;
+  height: 100%;
+}
+.work-steps .works .box img {
+  width: 65px;
+}
+.work-steps .works .box .text h3 {
+  font-size: 22px;
+  margin: 0;
+}
+.work-steps .works .box .text p {
+  color: #777;
+  margin: 10px 0 0;
+  line-height: 1.7;
+  font-size: 18px;
+}
+/* End Work Steps */
 /* Start Animation */
 @keyframes up-and-down {
   0%,
