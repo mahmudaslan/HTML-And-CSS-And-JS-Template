@@ -983,6 +983,11 @@ header .mega-menu .links a i {
   left: 0;
   height: 100%;
   background-color: var(--main-color);
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
 }
 /* End Our Skills */
 /* Start Work Steps */
